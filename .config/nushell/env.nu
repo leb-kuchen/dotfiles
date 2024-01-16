@@ -2,7 +2,7 @@
 #
 # version = "0.89.0"
 
-alias dotfiles = 
+alias dotfiles = git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME
 
 oh-my-posh init nu --config ~/themes/tonybaloney.omp.json
 def create_left_prompt [] {

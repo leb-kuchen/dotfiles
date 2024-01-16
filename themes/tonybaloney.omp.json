@@ -1,5 +1,8 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "var": {
+    "Dot": "." 
+  },
   "blocks": [
     {
       "alignment": "left",
@@ -8,11 +11,20 @@
           "background": "#29315A",
           "foreground": "#3EC669",
           "leading_diamond": "\ue0b6",
+          "style": "diamond",
+         "template": "{{$dirName := .PWD | dir}}{{if ne $dirName .Var.Dot}}{{$dirName}}{{end}}",
+          "trailing_diamond": "\ue0b4 ",
+          "type": "path"
+        },
+        {
+          "background": "#29315A",
+          "foreground": "#3EC669",
+          "leading_diamond": "\ue0b6",
           "properties": {
             "style": "folder"
           },
           "style": "diamond",
-          "template": "\ue5ff {{ .Path }}",
+         "template": "\ue5ff {{ .Path }}",
           "trailing_diamond": "\ue0b4 ",
           "type": "path"
         },
@@ -59,7 +71,7 @@
           "foreground": "#E64747",
           "trailing_diamond": "\ue0b4 ",
           "leading_diamond": "\ue0b6",
-          "template": "{{if gt .Code 1 }} {{ reason .Code }} {{end}}"
+          "template": "{{if and (ne (print .Code) (print (reason .Code))) (gt .Code 1) }} {{ reason .Code }} {{end}}"
         },
         {
           "background": "#29315A",
@@ -67,7 +79,7 @@
           "leading_diamond": "\ue0b6",
           "properties": {
             "style": "austin",
-            "always_enabled": true
+            "threshold": "1"
           },
           "style": "diamond",
           "template": "{{ .FormattedMs }}",

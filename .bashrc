@@ -126,11 +126,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-. "$HOME/.cargo/env"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH=/usr/share/swift/usr/bin:/home/dominic/.nvm/versions/node/v20.5.1/bin:/home/dominic/.cargo/bin:/home/dominic/.local/bin:/home/dominic/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/dominic/.dotnet/tools:/usr/local/go/bin:/home/dominic/go/bin
 
-source /home/dominic/.config/broot/launcher/bash/br
+eval "$(oh-my-posh init bash --config $HOME/themes/tonybaloney.omp.json)"
+
