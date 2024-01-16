@@ -9,7 +9,7 @@
           "foreground": "#3EC669",
           "leading_diamond": "\ue0b6",
           "style": "diamond",
-         "template": "{{ .PWD | trimSuffix .Path }}",
+         "template": "{{ .PWD | dir}}",
           "trailing_diamond": "\ue0b4 ",
           "type": "path"
         },
