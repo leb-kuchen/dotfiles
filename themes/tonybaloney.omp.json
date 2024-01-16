@@ -76,7 +76,6 @@
           "leading_diamond": "\ue0b6",
           "properties": {
             "style": "austin",
-            "always_enabled": true,
             "threshold": "1"
           },
           "style": "diamond",
