@@ -59,7 +59,7 @@
           "foreground": "#E64747",
           "trailing_diamond": "\ue0b4 ",
           "leading_diamond": "\ue0b6",
-          "template": "{{if and (ne (print .Code) (print (reason .Code))) (ge .Code 1) }} {{ reason .Code }} {{end}}"
+          "template": "{{if and (ne (print .Code) (print (reason .Code))) (gt .Code 1) }}{{ reason .Code }}{{end}}"
         },
         {
           "background": "#29315A",
