@@ -1,5 +1,8 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "var": {
+    "Dot": "." 
+  },
   "blocks": [
     {
       "alignment": "left",
@@ -9,7 +12,7 @@
           "foreground": "#3EC669",
           "leading_diamond": "\ue0b6",
           "style": "diamond",
-         "template": "{{ .PWD | dir}}",
+         "template": "{{$dirName := .PWD | dir}}{{if ne $dirName .Var.Dot}}{{$dirName}}{{end}}",
           "trailing_diamond": "\ue0b4 ",
           "type": "path"
         },
