@@ -8,11 +8,20 @@
           "background": "#29315A",
           "foreground": "#3EC669",
           "leading_diamond": "\ue0b6",
+          "style": "diamond",
+         "template": "{{ .PWD | trimSuffix .Path }}",
+          "trailing_diamond": "\ue0b4 ",
+          "type": "path"
+        },
+        {
+          "background": "#29315A",
+          "foreground": "#3EC669",
+          "leading_diamond": "\ue0b6",
           "properties": {
             "style": "folder"
           },
           "style": "diamond",
-          "template": "\ue5ff {{ .Path }}",
+         "template": "\ue5ff {{ .Path }}",
           "trailing_diamond": "\ue0b4 ",
           "type": "path"
         },
