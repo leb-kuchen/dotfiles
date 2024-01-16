@@ -72,4 +72,4 @@ $env:PATH += ":$HOME/go/bin"
 
 $env:PATH += ":$HOME/.cargo/bin"
 $env:PATH += ":$HOME/npm-global/bin"
-oh-my-posh init pwsh | Invoke-Expression
+oh-my-posh init pwsh --config ~/themes/tonybaloney.omp.json | Invoke-Expression
